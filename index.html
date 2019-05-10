@@ -12,49 +12,82 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="sheduler.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.5.3/js/bootstrap-colorpicker.min.js"></script>
+
+
+<!--    <link rel="stylesheet" type="text/css" href="style.css">-->
 </head>
 <body>
-<div class="container">
 
-    <h1>Process Scheduler</h1>
 
+
+
+<div class="container bg-dark text-white">
+
+    <h1 class="text-center">Process Scheduler</h1>
+
+    <br>
+    <br>
     <div>
-        <p>Enter Processes</p>
 
-        <div>
-            Process Name:<br>
-            <input type="text" name="pName" id="AddpName" value="A">
-            <br>
-            Burst Time:<br>
-            <input type="text" name="bTime" id="AddbTime" value="5">
-            <br>
-            Arrival Time:<br>
-            <input type="text" name="arrival" id="Addarrival" value="3">
-            <br>
-            Set Colour:<br>
-            <div id="cp1" data-color="#6D2781">
-                <input type="text" id="pColour" class="form-control" style="width:auto;display: none;"/> <br>
+        <div class="row">
+
+            <div class="col-sm border border-white" style="margin: 10px; padding-top: 10px;padding-bottom: 10px;">
+                <h3>Enter Processes</h3>
+                <br>
+                <div>
+                    Process Name:<br>
+                    <input type="text" name="pName" id="AddpName" value="A">
+                    <br>
+                    Burst Time:<br>
+                    <input type="text" name="bTime" id="AddbTime" value="5">
+                    <br>
+                    Arrival Time:<br>
+                    <input type="text" name="arrival" id="Addarrival" value="3">
+                    <br>
+                    <br>
+                    Set Colour:
+                    <div id="cp1" data-color="#6D2781">
+                        <input type="text" id="pColour" class="form-control" style="width:auto;display: none;"/> <br>
+                    </div>
+                    <br>
+                    <button class="btn-danger" onclick="add()">Add</button>
+                </div>
+
             </div>
 
-            <button onclick="add()">Add</button>
+
+<!--            Input table-->
+
+            <div class="col-sm " style="margin: 10px; padding-top: 10px;padding-bottom: 10px;">
+                <h3>Added processes for simulation</h3>
+                <br>
+                <div class="col">
+                    <!--                <p id="td">&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</p>-->
+                    <div style="height:400px; overflow-x:auto;" class="table-wrapper-scroll-y my-custom-scrollbar">
+
+                        <table class="table table-dark" id="iProcessTbl" style="width:50%">
+                            <tr>
+                                <th>Process Name</th>
+                                <th>Burst Time</th>
+                                <th>Arrival Time</th>
+                                <th>Colour</th>
+                                <th></th>
+                            </tr>
+                        </table>
+
+                        <br>
+                    </div>
+                </div>
+            </div>
+
         </div>
+
     </div>
 
-    <p id="td">------------</p>
 
-
-    <table class="table table-dark" id="iProcessTbl" style="width:50%">
-        <tr>
-            <th>Process Name</th>
-            <th>Burst Time</th>
-            <th>Arrival Time</th>
-            <th>Colour</th>
-        </tr>
-    </table>
 
     <br>
-    <br>
-    <button class="btn-primary" onclick="addItem()">Add Item</button>
+<!--    <button class="btn-primary" onclick="addItem()">Add Item</button>-->
     <button class="btn-primary" onclick="reset()">Reset</button>
 
     <button class="btn-primary" onclick="shedule()">Simulate</button>
@@ -62,10 +95,10 @@
 
 
     <div class="row" id="_sim">
-        <div style="display:inline;">
-            <canvas style="display:block;background:#98bf21;height:75px;width:50px;position:relative;border:solid;"></canvas>
-            <h2 style="display:block;background:red;height:50px;width:50px;position:relative;border:solid; text-align: center;">2</h2>
-        </div>
+<!--        <div style="display:inline;">-->
+<!--            <canvas style="display:block;background:#98bf21;height:75px;width:50px;position:relative;border:solid;"></canvas>-->
+<!--            <h2 style="display:block;background:red;height:50px;width:50px;position:relative;border:solid; text-align: center;">2</h2>-->
+<!--        </div>-->
 
     </div>
 </div>
