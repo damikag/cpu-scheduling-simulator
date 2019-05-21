@@ -96,9 +96,9 @@ function addItem(clr) {
     //     "   <br> <canvas style=\"background:red;height:100px;width:100px;position:relative;border:solid;\"></canvas>\n" +
     //     "</canvas>");
 
-    $("#_sim").append("<div>\n" +
+    $("#_sim").append("<div class=\"tooltip1\" >\n" +
         "            <canvas style=\"display:block;background:"+clr+";height:75px;width:50px;position:relative;border:solid;\"></canvas>\n" +
-
+        "<span class=\"tooltiptext1\">Tooltip text</span>"+
         "<h2 style=\"display:block;background:red;height:50px;width:50px;position:relative;border:solid; text-align: center;\">"+time+"</h2>"+
         "        </div>");
 
